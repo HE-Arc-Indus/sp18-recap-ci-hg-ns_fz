@@ -7,20 +7,31 @@ import org.junit.Test;
 
 public class FizzBuzzTest {
   FizzBuzz fb;
-  String[] testFb;
 
   @Before
-  public void setUp() throws Exception {
+  public void init() {
     fb = new FizzBuzz();
+  }
+
+  @Test
+  public void checkSizeList() {
+    String [] myList = fb.generateList(100);
+    for (Integer i = 1; i <= 100; i++) {
+      assertEquals("nombre suit la séquence", i.toString(), myList[i - 1]);
+    }
 
   }
 
   @Test
-  public void checkOneToHundred() {
+  public void checkFizz() {
+    String [] myList = fb.generateList(100);
 
-    for (Integer i=1;i<=100;i++){
-      assertEquals("nombre suit la séquence", i.toString(), fb.getMaListe()[i-1]);
+    for (Integer i = 3; i <= 100; i=i+3) {
+      if (i % 5 != 0){
+        assertEquals("Le nombre divisible par trois = Fizz", "Fizz", myList[i - 1]);
+      }
     }
+
   }
 
 }
