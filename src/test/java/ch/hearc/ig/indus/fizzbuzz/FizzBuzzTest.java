@@ -28,7 +28,7 @@ public class FizzBuzzTest {
 
     for (Integer i = 3; i <= 100; i=i+3) {
       if (i % 5 != 0){
-        assertEquals("Le nombre divisible par trois = Fizz", "Fizz", myList[i - 1]);
+        assertEquals("Le  nombre divisible par trois = Fizz", "Fizz", myList[i - 1]);
       }
     }
 
