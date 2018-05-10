@@ -26,9 +26,11 @@ public class FizzBuzzTest {
   public void checkFizz() {
     String [] myList = fb.generateList(100);
 
+    myList = fb.generateFizzBuzz(myList);
+
     for (Integer i = 3; i <= 100; i=i+3) {
       if (i % 5 != 0){
-        assertEquals("Le  nombre divisible par trois = Fizz", "Fizz", myList[i - 1]);
+        assertEquals("Le nombre divisible par trois = Fizz", "Fizz", myList[i - 1]);
       }
     }
 
