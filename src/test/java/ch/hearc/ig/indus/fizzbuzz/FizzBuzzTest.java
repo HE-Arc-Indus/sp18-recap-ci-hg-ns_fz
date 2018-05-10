@@ -7,15 +7,16 @@ import org.junit.Test;
 
 public class FizzBuzzTest {
   FizzBuzz fb;
+  String[] myList;
 
   @Before
   public void init() {
     fb = new FizzBuzz();
+    myList = fb.generateList(100);
   }
 
   @Test
   public void checkSizeList() {
-    String [] myList = fb.generateList(100);
     for (Integer i = 1; i <= 100; i++) {
       assertEquals("nombre suit la séquence", i.toString(), myList[i - 1]);
     }
@@ -24,7 +25,6 @@ public class FizzBuzzTest {
 
   @Test
   public void checkFizz() {
-    String [] myList = fb.generateList(100);
 
     myList = fb.generateFizzBuzz(myList);
 
