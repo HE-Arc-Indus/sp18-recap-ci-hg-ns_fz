@@ -1,15 +1,20 @@
 package ch.hearc.ig.indus.fizzbuzz;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
+import org.junit.Test;
 
 public class FizzBuzzTest {
   FizzBuzz fb;
   String[] testFb;
+
   @Before
   public void setUp() throws Exception {
     fb = new FizzBuzz();
 
   }
+
   @Test
   public void checkOneToHundred() {
 
