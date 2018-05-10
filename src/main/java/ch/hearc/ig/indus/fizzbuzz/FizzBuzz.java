@@ -18,12 +18,19 @@ public class FizzBuzz {
 
     public String[] generateFizzBuzz (String [] p_list){
       for (Integer i = 1; i <=p_list.length; i++) {
-        if ((i % 3 == 0) && (i % 5 != 0)) {
-          p_list[i - 1]="Fizz";
+
+        if (i % 3 == 0) {
+          p_list[i - 1] = "Fizz";
         }
+
         if (i % 5 == 0) {
           p_list[i - 1] = "Buzz";
         }
+
+        if ((i % 3 == 0) && (i % 5 == 0)) {
+          p_list[i - 1] = "FizzBuzz";
+        }
+
       }
 
       return p_list;

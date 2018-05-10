@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class FizzBuzzTest {
+
   FizzBuzz fb;
   String[] myList;
 
@@ -28,8 +29,8 @@ public class FizzBuzzTest {
 
     myList = fb.generateFizzBuzz(myList);
 
-    for (Integer i = 3; i <= 100; i=i+3) {
-      if (i % 5 != 0){
+    for (Integer i = 3; i <= 100; i = i + 3) {
+      if (i % 5 != 0) {
         assertEquals("Le nombre divisible par trois = Fizz", "Fizz", myList[i - 1]);
       }
     }
@@ -41,7 +42,9 @@ public class FizzBuzzTest {
     myList = fb.generateFizzBuzz(myList);
 
     for (Integer i = 5; i <= 100; i += 5) {
-      assertEquals("Le nombre est divisible par 5", "Buzz", myList[i - 1]);
+      if (i % 3 != 0) {
+        assertEquals("Le nombre est divisible par 5", "Buzz", myList[i - 1]);
+      }
     }
 
   }
