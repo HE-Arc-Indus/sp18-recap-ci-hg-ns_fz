@@ -36,4 +36,14 @@ public class FizzBuzzTest {
 
   }
 
+  @Test
+  public void checkBuzz() {
+    myList = fb.generateFizzBuzz(myList);
+
+    for (Integer i = 5; i <= 100; i += 5) {
+      assertEquals("Le nombre est divisible par 5", "Buzz", myList[i - 1]);
+    }
+
+  }
+
 }
