@@ -21,6 +21,9 @@ public class FizzBuzz {
         if ((i % 3 == 0) && (i % 5 != 0)) {
           p_list[i - 1]="Fizz";
         }
+        if (i % 5 == 0) {
+          p_list[i - 1] = "Buzz";
+        }
       }
 
       return p_list;
