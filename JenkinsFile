@@ -24,10 +24,10 @@ pipeline {
                 echo "Tests unitaires lancés avec succès"
             }         
         }
-        post {
+    }
+    post {
             always {
                     junit "path/to/xml"
             }
         }
-    }
 }
